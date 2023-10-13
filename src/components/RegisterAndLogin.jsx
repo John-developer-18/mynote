@@ -29,7 +29,7 @@ function RegisterAndLogin() {
   
   }
   return (
-    <div className="min-h-screen grid place-content-center space-y-4 text-center text-blue-900 border-2">
+    <div className="min-h-screen grid place-content-center space-y-4 text-center text-blue-900">
       <div className='flex flex-row justify-center space-x-3 items-center'>
         <div className={login == false?'border-[1px] border-blue-900 p-3':'cursor-pointer'} onClick={()=>setLogin(false)}>Sign up</div>
         <div className={login == true?'border-[1px] border-blue-900 p-3':'cursor-pointer'} onClick={()=>setLogin(true)}>Sign in</div>
