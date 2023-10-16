@@ -2,12 +2,13 @@ import DisplayNote from "./DisplayNote"
 import { useState, useEffect } from "react"
 import { collection, getDocs, addDoc, deleteDoc, doc, updateDoc } from "firebase/firestore"
 import {db} from '../firebase.config'
+
 function Note() {
   const [notes, setNotes] = useState([])
   const [addNote, setAddNote] = useState({title:"", content:""})
   const [id, setId]  = useState("")
   const noteRef = collection(db, 'note')
-  
+
   useEffect(()=>{
      const getNotes = async () =>{
        const data = await getDocs(noteRef)

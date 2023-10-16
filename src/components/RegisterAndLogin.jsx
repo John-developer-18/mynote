@@ -35,11 +35,12 @@ function RegisterAndLogin() {
         <div className={login == true?'border-[1px] border-blue-900 p-3':'cursor-pointer'} onClick={()=>setLogin(true)}>Sign in</div>
       </div>
       <h1 className="font-bold text-lg">{login?'Sign in':'Sign up'}</h1>
-      <form className="flex flex-col space-y-5" onSubmit={(e)=>handleSubmit(e,login?'sign-in':'sign-up')}>
+      <form className="flex flex-col w-[300px] space-y-5" onSubmit={(e)=>handleSubmit(e,login?'sign-in':'sign-up')}>
         <input name="email" placeholder="Email" className="outline-blue-900 outline-2 cursor-pointer border-blue-900 border-[1px] px-3 py-1"/>
         <input name="password" type="password" placeholder="Password" className="outline-blue-900 outline-2 cursor-pointer px-3 py-1 border-blue-900 border-[1px]"/>
         <button className="bg-blue-900 hover:bg-blue-900/90 text-white px-3 py-2">{login?'Sign up':'Sign up'}</button>
       </form>
+      <p className='hover:cursor-pointer text-blue-900' onClick={()=>setLogin(false)}>{"Don't"} have an account? Sign up</p>
     </div>
   )
 }
