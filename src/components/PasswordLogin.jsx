@@ -2,6 +2,7 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom'
 import RegisterAndLogin from './RegisterAndLogin'
 import Landing from './Landing'
 import NotePage from './NotePage'
+
 function PasswordLogin() {
   return (
     <BrowserRouter>

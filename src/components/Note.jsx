@@ -9,6 +9,7 @@ function Note() {
   const [id, setId]  = useState("")
   const noteRef = collection(db, 'note')
 
+  
   useEffect(()=>{
      const getNotes = async () =>{
        const data = await getDocs(noteRef)
